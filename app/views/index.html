@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="NoteApp">
 <head>
 	<meta charset="UTF-8">
 	<title>Note App</title>
@@ -7,26 +7,34 @@
 	<link rel="stylesheet" href="assets/styles/bootstrap-theme.css">
 </head>
 <body>
-	<h1>Hello World!</h1>
+	<h1>Note App</h1>
+	<div ng-view></div>
 </body>
 
 <!-- bower files -->
-<script src="bower_components/jquery/dist/jquery.js"></script>
-<script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-route/angular-route.js"></script>
-<script src="bower_components/angular-resource/angular-resource.js"></script>
-
+<script src="assets/javascript/vendor/bower_components/jquery/dist/jquery.js"></script>
+<script src="assets/javascript/vendor/bower_components/angular/angular.js"></script>
+<script src="assets/javascript/vendor/bower_components/angular-route/angular-route.js"></script>
+<script src="assets/javascript/vendor/bower_components/angular-resource/angular-resource.js"></script>
 
 <!-- App -->
-
+<script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/routes.js"></script>
 
 <!-- Directives -->
 
 
 <!-- Controllers -->
-
+<script src="assets/javascript/controllers/noteIndexController.js"></script>
+<script src="assets/javascript/controllers/noteShowController.js"></script>
+<script src="assets/javascript/controllers/noteEditController.js"></script>
+<script src="assets/javascript/controllers/noteCreateController.js"></script>
 
 <!-- Services -->
 
 
 </html>
+
+
+
+
