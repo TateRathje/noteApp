@@ -1,7 +1,12 @@
-angular.module('NoteApp').controller('NotesEditController', function(Note, $scope, $routeParams){
+angular.module('NoteApp').controller('NotesEditController', function(Note, $scope, $routeParams, $location){
 	$scope.note = Note.get({id: $routeParams.id});
+	$scope.isSubmitting = false;
 
 	$scope.saveNote = function(note) {
-		note.$update();	
-	}	
+		$scope.isSubmitting = true;
+		note.$update().finally(function(){
+			$scope.isSubmitting = false;
+			$location.path("/notes/" + note.id);
+		});	
+	}
 });

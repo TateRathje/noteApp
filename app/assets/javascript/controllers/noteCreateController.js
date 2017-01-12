@@ -4,9 +4,12 @@ angular.module('NoteApp').controller('NotesCreateController', function($scope, N
 
 	$scope.saveNote = function(note) {
 		$scope.isSubmitting = true;
-		note.$save().finally(function() {
+		note.$save().then(function(){
+			$location.path('/notes');	
+		}).catch(function (errors) {
+			// validations
+		}).finally(function() {
 			$scope.isSubmitting = false;
-			$location.path('/notes');
 		});
 	}
 });
