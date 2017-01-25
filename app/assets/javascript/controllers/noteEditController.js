@@ -1,6 +1,7 @@
-angular.module('NoteApp').controller('NotesEditController', function(Note, $scope, $routeParams, $location){
+angular.module('NoteApp').controller('NotesEditController', function(Note, Category, $scope, $routeParams, $location){
 	$scope.note = Note.get({id: $routeParams.id});
 	$scope.isSubmitting = false;
+	$scope.categories = Category.query();
 
 	$scope.saveNote = function(note) {
 		$scope.isSubmitting = true;
