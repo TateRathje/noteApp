@@ -1,5 +1,5 @@
 <h1>Notes <a href="#/notes/new" class="btn btn-default">New Note</a></h1>
-<na-category-select ng-model="search.category"></na-category-select>
+<na-category-selector ng-model="search.category"></na-category-selector>
 <div class="row">
   <div ng-repeat="note in notes" class="col-sm-6">
     <h2><a ng-href="#/notes/{{note.id}}">{{note.title}}</a></h2>
